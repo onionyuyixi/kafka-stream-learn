@@ -1,10 +1,10 @@
 package com.onion.kafkastreamlrean.clients;
 
-import bbejeck.model.*;
-import bbejeck.util.Topics;
-import bbejeck.util.datagen.DataGenerator;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.onion.kafkastreamlrean.model.*;
+import com.onion.kafkastreamlrean.util.Topics;
+import com.onion.kafkastreamlrean.util.datagen.DataGenerator;
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
@@ -17,9 +17,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.function.Function;
 
-import static bbejeck.util.Topics.CLIENTS;
-import static bbejeck.util.Topics.COMPANIES;
-import static bbejeck.util.datagen.DataGenerator.*;
+import static com.onion.kafkastreamlrean.util.Topics.CLIENTS;
+import static com.onion.kafkastreamlrean.util.Topics.COMPANIES;
+import static com.onion.kafkastreamlrean.util.datagen.DataGenerator.*;
 
 /**
  * Class will produce 100 Purchase records per iteration
@@ -47,7 +47,7 @@ public class MockDataProducer {
 
 
     public static void producePurchaseData() {
-        producePurchaseData(DataGenerator.DEFAULT_NUM_PURCHASES, DataGenerator.NUM_ITERATIONS, DataGenerator.NUMBER_UNIQUE_CUSTOMERS);
+        producePurchaseData(DataGenerator.DEFAULT_NUM_PURCHASES, NUM_ITERATIONS, NUMBER_UNIQUE_CUSTOMERS);
     }
 
     public static void producePurchaseData(int numberPurchases, int numberIterations, int numberCustomers) {
@@ -290,7 +290,7 @@ public class MockDataProducer {
     }
 
     public static void produceStockTickerData() {
-        produceStockTickerData(DataGenerator.NUMBER_TRADED_COMPANIES, NUM_ITERATIONS);
+        produceStockTickerData(NUMBER_TRADED_COMPANIES, NUM_ITERATIONS);
     }
 
     public static void produceStockTickerData(int numberCompanies, int numberIterations) {

@@ -1,12 +1,13 @@
 package com.onion.kafkastreamlrean.util.serializer;
 
 
-import bbejeck.collectors.FixedSizePriorityQueue;
-import bbejeck.model.ShareVolume;
+
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.onion.kafkastreamlrean.collectors.FixedSizePriorityQueue;
+import com.onion.kafkastreamlrean.model.ShareVolume;
 
 import java.io.IOException;
 import java.util.ArrayList;

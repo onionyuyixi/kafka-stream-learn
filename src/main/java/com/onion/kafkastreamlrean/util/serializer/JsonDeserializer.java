@@ -16,9 +16,9 @@
 
 package com.onion.kafkastreamlrean.util.serializer;
 
-import bbejeck.collectors.FixedSizePriorityQueue;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.onion.kafkastreamlrean.collectors.FixedSizePriorityQueue;
 import org.apache.kafka.common.serialization.Deserializer;
 
 import java.lang.reflect.Type;

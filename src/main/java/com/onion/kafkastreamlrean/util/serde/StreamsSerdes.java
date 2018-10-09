@@ -1,11 +1,11 @@
 package com.onion.kafkastreamlrean.util.serde;
 
-import bbejeck.collectors.FixedSizePriorityQueue;
-import bbejeck.model.*;
-import bbejeck.util.collection.Tuple;
-import bbejeck.util.serializer.JsonDeserializer;
-import bbejeck.util.serializer.JsonSerializer;
 import com.google.gson.reflect.TypeToken;
+import com.onion.kafkastreamlrean.collectors.FixedSizePriorityQueue;
+import com.onion.kafkastreamlrean.model.*;
+import com.onion.kafkastreamlrean.util.collection.Tuple;
+import com.onion.kafkastreamlrean.util.serializer.JsonDeserializer;
+import com.onion.kafkastreamlrean.util.serializer.JsonSerializer;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serializer;
