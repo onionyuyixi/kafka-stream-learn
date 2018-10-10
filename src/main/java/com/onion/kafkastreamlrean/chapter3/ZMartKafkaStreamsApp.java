@@ -63,9 +63,9 @@ public class ZMartKafkaStreamsApp {
         KafkaStreams kafkaStreams = new KafkaStreams(streamsBuilder.build(),streamsConfig);
         LOG.info("ZMart First Kafka Streams Application Started");
         kafkaStreams.start();
-//        Thread.sleep(65000);
-//        LOG.info("Shutting down the Kafka Streams Application now");
-//        kafkaStreams.close();
+        Thread.sleep(65000);
+        LOG.info("Shutting down the Kafka Streams Application now");
+        kafkaStreams.close();
         MockDataProducer.shutdown();
     }
 
@@ -73,14 +73,14 @@ public class ZMartKafkaStreamsApp {
 
 
     private static Properties getProperties() {
-        Properties props = new Properties();
-        props.put(StreamsConfig.CLIENT_ID_CONFIG, "FirstZmart-Kafka-Streams-Client");
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "zmart-purchases");
-        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "FirstZmart-Kafka-Streams-App");
-        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        props.put(StreamsConfig.REPLICATION_FACTOR_CONFIG, 1);
-        props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, WallclockTimestampExtractor.class);
-        return props;
+        Properties properties = new Properties();
+        properties.put(StreamsConfig.CLIENT_ID_CONFIG, "FirstZmart-Kafka-Streams-Client");
+        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "zmart-purchases");
+        properties.put(StreamsConfig.APPLICATION_ID_CONFIG, "FirstZmart-Kafka-Streams-App");
+        properties.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        properties.put(StreamsConfig.REPLICATION_FACTOR_CONFIG, 1);
+        properties.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, WallclockTimestampExtractor.class);
+        return properties;
     }
 
 
