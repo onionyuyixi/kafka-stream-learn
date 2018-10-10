@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class PurchaseRewardTransformer implements ValueTransformer<Purchase,RewardAccumulator> {
 
-    private KeyValueStore<String,Integer> stateStore;
+    private KeyValueStore<String,Integer> stateStore; //这是一个怎样的store  这里的定义 将会决定store的主题中 记录的内容
     private final String storeName;
     private ProcessorContext context;
 
